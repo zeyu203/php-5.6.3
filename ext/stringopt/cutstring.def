@@ -1,0 +1,1 @@
+string cutstring(string str, string beg, string end, string &remain=null)
