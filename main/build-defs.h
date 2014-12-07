@@ -18,7 +18,7 @@
 
 /* $Id$ */
 
-#define CONFIGURE_COMMAND " './configure'  '--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' '--with-mysql=/usr' '--with-mysqli=/usr/bin/mysql_config' '--with-libxml-dir=/usr' '--enable-xml' '--disable-rpath' '--enable-bcmath' '--enable-shmop' '--enable-sysvsem' '--enable-inline-optimization' '--with-curl' '--enable-mbregex' '--enable-fpm' '--enable-mbstring' '--with-openssl' '--with-mhash' '--enable-pcntl' '--enable-sockets' '--with-xmlrpc' '--enable-zip' '--enable-soap' '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config'"
+#define CONFIGURE_COMMAND " './configure'  '--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' '--with-mysql=/usr' '--with-mysqli=/usr/bin/mysql_config' '--with-libxml-dir=/usr' '--enable-xml' '--disable-rpath' '--enable-bcmath' '--enable-shmop' '--enable-sysvsem' '--enable-inline-optimization' '--with-curl' '--enable-mbregex' '--enable-fpm' '--enable-mbstring' '--with-openssl' '--with-mhash' '--enable-pcntl' '--enable-sockets' '--with-xmlrpc' '--enable-zip' '--enable-soap' '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config' '--enable-cutstring'"
 #define PHP_ADA_INCLUDE		""
 #define PHP_ADA_LFLAGS		""
 #define PHP_ADA_LIBS		""

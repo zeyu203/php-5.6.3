@@ -13,9 +13,9 @@ dnl [  --with-myfunctions             Include myfunctions support])
 
 dnl Otherwise use enable:
 
-PHP_ARG_ENABLE(myfunctions, whether to enable myfunctions support,
-Make sure that the comment is aligned:
-[  --enable-myfunctions           Enable myfunctions support])
+dnl PHP_ARG_ENABLE(myfunctions, whether to enable myfunctions support,
+dnl Make sure that the comment is aligned:
+dnl [  --enable-myfunctions           Enable myfunctions support])
 
 if test "$PHP_MYFUNCTIONS" != "no"; then
   dnl Write more examples of tests here...

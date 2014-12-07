@@ -36,6 +36,7 @@
 #include "ext/bcmath/php_bcmath.h"
 #include "ext/ctype/php_ctype.h"
 #include "ext/curl/php_curl.h"
+#include "ext/cutstring/php_cutstring.h"
 #include "ext/dom/php_dom.h"
 #include "ext/fileinfo/php_fileinfo.h"
 #include "ext/filter/php_filter.h"
@@ -43,6 +44,7 @@
 #include "ext/iconv/php_iconv.h"
 #include "ext/json/php_json.h"
 #include "ext/mbstring/mbstring.h"
+#include "ext/myfunctions/php_myfunctions.h"
 #include "ext/mysql/php_mysql.h"
 #include "ext/mysqli/php_mysqli.h"
 #include "ext/pcntl/php_pcntl.h"
@@ -77,6 +79,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_bcmath_ptr,
 	phpext_ctype_ptr,
 	phpext_curl_ptr,
+	phpext_cutstring_ptr,
 	phpext_dom_ptr,
 	phpext_fileinfo_ptr,
 	phpext_filter_ptr,
@@ -84,6 +87,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_iconv_ptr,
 	phpext_json_ptr,
 	phpext_mbstring_ptr,
+	phpext_myfunctions_ptr,
 	phpext_mysql_ptr,
 	phpext_mysqli_ptr,
 	phpext_pcntl_ptr,

@@ -17,7 +17,7 @@ program_suffix=""
 exe_extension=""
 php_cli_binary=NONE
 php_cgi_binary=NONE
-configure_options=" '--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' '--with-mysql=/usr' '--with-mysqli=/usr/bin/mysql_config' '--with-libxml-dir=/usr' '--enable-xml' '--disable-rpath' '--enable-bcmath' '--enable-shmop' '--enable-sysvsem' '--enable-inline-optimization' '--with-curl' '--enable-mbregex' '--enable-fpm' '--enable-mbstring' '--with-openssl' '--with-mhash' '--enable-pcntl' '--enable-sockets' '--with-xmlrpc' '--enable-zip' '--enable-soap' '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config'"
+configure_options=" '--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' '--with-mysql=/usr' '--with-mysqli=/usr/bin/mysql_config' '--with-libxml-dir=/usr' '--enable-xml' '--disable-rpath' '--enable-bcmath' '--enable-shmop' '--enable-sysvsem' '--enable-inline-optimization' '--with-curl' '--enable-mbregex' '--enable-fpm' '--enable-mbstring' '--with-openssl' '--with-mhash' '--enable-pcntl' '--enable-sockets' '--with-xmlrpc' '--enable-zip' '--enable-soap' '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config' '--enable-cutstring'"
 php_sapis=" cli fpm cgi"
 
 # Set php_cli_binary and php_cgi_binary if available

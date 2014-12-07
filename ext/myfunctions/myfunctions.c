@@ -71,53 +71,6 @@ PHP_FUNCTION(confirm_myfunctions_compiled)
    follow this convention for the convenience of others editing your code.
 */
 
-/* {{{ proto string self_concat(string str, int n)
-    */
-PHP_FUNCTION(self_concat)
-{
-	char *str = NULL;
-	int argc = ZEND_NUM_ARGS();
-	int str_len;
-	long n;
-
-	char *result; /* Points to resulting string */
-	char *ptr; /* Points at the next location we want to copy to */
-	int result_length; /* Length of resulting string */
-
-	if (zend_parse_parameters(argc TSRMLS_CC, "sl", &str, &str_len, &n) == FAILURE) 
-		return;
-	 
-	/* Calculate length of result */
-	result_length = (str_len * n);
-	 
-	/* Allocate memory for result */
-	result = (char *) emalloc(result_length + 1);
-	 
-	/* Point at the beginning of the result */
-	ptr = result;
-	 
-	while (n--) {
-
-		/* Copy str to the result */
-		memcpy(ptr, str, str_len);
-		 
-		/* Increment ptr to point at the next position we want to write to */
-		ptr += str_len;
-		 
-	}
-	 
-	/* Null terminate the result. Always null-terminate your strings
-	 *  
-	 *  even if they are binary strings */
-	*ptr = '\0';
-	 
-	/* Return result to the scripting engine without duplicating it*/
-	RETURN_STRINGL(result, result_length, 0);
-
-	//php_error(E_WARNING, "self_concat: not yet implemented");
-}
-/* }}} */
-
 
 /* {{{ php_myfunctions_init_globals
  */
@@ -190,7 +143,6 @@ PHP_MINFO_FUNCTION(myfunctions)
  */
 const zend_function_entry myfunctions_functions[] = {
 	PHP_FE(confirm_myfunctions_compiled,	NULL)		/* For testing, remove later. */
-	PHP_FE(self_concat,	NULL)
 	PHP_FE_END	/* Must be the last line in myfunctions_functions[] */
 };
 /* }}} */

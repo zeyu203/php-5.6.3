@@ -25,4 +25,5 @@
 '--enable-zip' \
 '--enable-soap' \
 '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config' \
+'--enable-cutstring' \
 "$@"

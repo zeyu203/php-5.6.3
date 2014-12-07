@@ -208,6 +208,8 @@ ext/curl/share.lo: /home/zeyu/Documents/php-5.6.3/ext/curl/share.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/curl/ -I/home/zeyu/Documents/php-5.6.3/ext/curl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/curl/share.c -o ext/curl/share.lo 
 ext/curl/curl_file.lo: /home/zeyu/Documents/php-5.6.3/ext/curl/curl_file.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/curl/ -I/home/zeyu/Documents/php-5.6.3/ext/curl/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/curl/curl_file.c -o ext/curl/curl_file.lo 
+ext/cutstring/cutstring.lo: /home/zeyu/Documents/php-5.6.3/ext/cutstring/cutstring.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/cutstring/ -I/home/zeyu/Documents/php-5.6.3/ext/cutstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/cutstring/cutstring.c -o ext/cutstring/cutstring.lo 
 ext/dom/php_dom.lo: /home/zeyu/Documents/php-5.6.3/ext/dom/php_dom.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/dom/ -I/home/zeyu/Documents/php-5.6.3/ext/dom/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/dom/php_dom.c -o ext/dom/php_dom.lo 
 ext/dom/attr.lo: /home/zeyu/Documents/php-5.6.3/ext/dom/attr.c
@@ -608,6 +610,8 @@ ext/mbstring/mb_gpc.lo: /home/zeyu/Documents/php-5.6.3/ext/mbstring/mb_gpc.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/mbstring/ -I/home/zeyu/Documents/php-5.6.3/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/mbstring/mb_gpc.c -o ext/mbstring/mb_gpc.lo 
 ext/mbstring/php_mbregex.lo: /home/zeyu/Documents/php-5.6.3/ext/mbstring/php_mbregex.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/mbstring/ -I/home/zeyu/Documents/php-5.6.3/ext/mbstring/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/mbstring/php_mbregex.c -o ext/mbstring/php_mbregex.lo 
+ext/myfunctions/myfunctions.lo: /home/zeyu/Documents/php-5.6.3/ext/myfunctions/myfunctions.c
+	$(LIBTOOL) --mode=compile $(CC)  -Iext/myfunctions/ -I/home/zeyu/Documents/php-5.6.3/ext/myfunctions/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/myfunctions/myfunctions.c -o ext/myfunctions/myfunctions.lo 
 ext/mysql/php_mysql.lo: /home/zeyu/Documents/php-5.6.3/ext/mysql/php_mysql.c
 	$(LIBTOOL) --mode=compile $(CC)  -Iext/mysql/ -I/home/zeyu/Documents/php-5.6.3/ext/mysql/ $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) -c /home/zeyu/Documents/php-5.6.3/ext/mysql/php_mysql.c -o ext/mysql/php_mysql.lo 
 ext/mysqli/mysqli.lo: /home/zeyu/Documents/php-5.6.3/ext/mysqli/mysqli.c

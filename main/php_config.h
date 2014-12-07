@@ -46,6 +46,9 @@
 /* Whether to build curl as dynamic module */
 /* #undef COMPILE_DL_CURL */
 
+/* Whether to build cutstring as dynamic module */
+/* #undef COMPILE_DL_CUTSTRING */
+
 /* Whether to build date as dynamic module */
 /* #undef COMPILE_DL_DATE */
 
@@ -114,6 +117,9 @@
 
 /* Whether to build mssql as dynamic module */
 /* #undef COMPILE_DL_MSSQL */
+
+/* Whether to build myfunctions as dynamic module */
+/* #undef COMPILE_DL_MYFUNCTIONS */
 
 /* Whether to build mysql as dynamic module */
 /* #undef COMPILE_DL_MYSQL */
@@ -2204,7 +2210,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2014-12-06"
+#define PHP_BUILD_DATE "2014-12-07"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1

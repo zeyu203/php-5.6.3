@@ -73,6 +73,96 @@ PHP_FUNCTION(confirm_cutstring_compiled)
 
 /* {{{ proto string cutstring(string str, string beg, string end)
     */
+static inline const char *
+strpos (const char *str, const char *need, int need_len, const char *end)
+{
+	const char *p = str;
+	const char ne = need[need_len - 1];
+
+	if (need_len == 1)
+		return (char *)memchr(p, *need, (end-p));
+
+	end -= need_len;
+
+	while (p <= end)
+	{
+		if ((p = (char *)memchr(p, *need, (end-p+1))) != NULL
+				&& ne == p[need_len-1])
+		{
+			if (!memcmp(need, p, need_len - 1))
+				return p;
+		}
+		
+		if (p == NULL)
+			return NULL;
+
+		p++;
+	}
+
+	return NULL;
+}
+
+static inline const char **
+orstropt (const char *str, int str_len, const char *beg, int beg_len)
+{
+	int firstpos;
+	const char *orptr;
+	const char *andptr;
+	const char *andsignptr = beg;
+	const char *orsignptr = beg;
+	const char *strptr = str;
+	const char **result = malloc(sizeof(const char *)*2);
+
+	orptr = beg;
+	while (orptr < beg + beg_len)
+	{
+		firstpos = 1;
+		result[0] = NULL;
+		orptr = strpos(orsignptr, "<![||]>", 7, beg + beg_len);
+		strptr = str;
+		if (orptr == NULL)
+			orptr = beg + beg_len;
+		andptr = andsignptr;
+		while (andptr < orptr)
+		{
+			andptr = strpos(andsignptr, "<![&&]>", 7, orptr);
+			if (andptr == NULL)
+				andptr = orptr;
+			strptr = strpos(strptr, andsignptr, andptr-andsignptr, str + str_len);
+			if (strptr != NULL)
+			{
+				if (firstpos)
+				{
+					result[0] = strptr;
+					firstpos = 0;
+				}
+				strptr += andptr - andsignptr;
+				andptr += 7;
+				andsignptr = andptr;
+			}
+			else
+				break;
+		}
+		if (strptr == NULL)
+		{
+			orptr += 7;
+			andsignptr = orptr;
+			orsignptr = orptr;
+		}
+		else
+			break;
+	}
+	
+	if (strptr == NULL)
+	{
+		result[0] = result[1] = NULL;
+		return result;
+	}
+
+	result[1] = strptr - 1;
+	return result;
+}
+
 PHP_FUNCTION(cutstring)
 {
 	char *str = NULL;
@@ -83,23 +173,30 @@ PHP_FUNCTION(cutstring)
 	int beg_len;
 	int end_len;
 
-	int i, j;
-	char *signs = (char *)emalloc(20);
-	char *ptr;
+	const char **begptr;
+	const char **endptr;
+	char *result = NULL;
 
 	if (zend_parse_parameters(argc TSRMLS_CC, "sss", &str, &str_len, &beg, &beg_len, &end, &end_len) == FAILURE) 
 		return;
 
-	ptr = signs;
-	memcpy(ptr, "&&]>", 4);
-	ptr += 4;
-	memcpy(ptr, "||]>", 4);
-	ptr += 4;
-	memcpy(ptr, "+INF]>", 6);
-	ptr += 6;
-	memcpy(ptr, "-INF]>", 6);
+	begptr = orstropt(str, str_len, beg, beg_len);
+	if (begptr[1] == NULL)
+		RETURN_NULL();
 
-	for (i=0; i<beg_len; ++i)
+	endptr = orstropt(begptr[1], str - begptr[1] + str_len, end, end_len);
+
+	if (endptr[1] != NULL && endptr[0]-begptr[1]-1 > 0)
+	{
+		result = emalloc(sizeof(char)*(endptr[0]-begptr[1]));
+		memcpy(result, begptr[1]+1, endptr[0]-begptr[1]-1);
+	}
+	else
+		RETURN_NULL();
+
+	result[endptr[0]-begptr[1]-1] = '\0';
+
+	RETURN_STRINGL(result, endptr[0]-begptr[1]-1, 0);
 
 	php_error(E_WARNING, "cutstring: not yet implemented");
 }
