@@ -561,13 +561,13 @@
 #define HAVE_CURL_EASY_STRERROR 1
 
 /* Have cURL with GnuTLS support */
-#define HAVE_CURL_GNUTLS 1
+/* #undef HAVE_CURL_GNUTLS */
 
 /* */
 #define HAVE_CURL_MULTI_STRERROR 1
 
 /* Have cURL with OpenSSL support */
-/* #undef HAVE_CURL_OPENSSL */
+#define HAVE_CURL_OPENSSL 1
 
 /* Have cURL with SSL support */
 #define HAVE_CURL_SSL 1
@@ -1279,7 +1279,7 @@
 #define HAVE_ONIG 1
 
 /* Define to 1 if you have the <openssl/crypto.h> header file. */
-/* #undef HAVE_OPENSSL_CRYPTO_H */
+#define HAVE_OPENSSL_CRYPTO_H 1
 
 /* */
 #define HAVE_OPENSSL_EXT 1
@@ -2210,7 +2210,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2014-12-07"
+#define PHP_BUILD_DATE "2014-12-08"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1
@@ -2288,7 +2288,7 @@
 #define PHP_STD_DES_CRYPT 1
 
 /* uname -a output */
-#define PHP_UNAME "Linux ubuntu 3.13.0-40-generic #69-Ubuntu SMP Thu Nov 13 17:56:26 UTC 2014 i686 i686 i686 GNU/Linux"
+#define PHP_UNAME "Linux ubuntu 3.2.0-67-generic-pae #101-Ubuntu SMP Tue Jul 15 18:04:54 UTC 2014 i686 i686 i386 GNU/Linux"
 
 /* Whether PHP has to use its own crypt_r for blowfish, des and ext des */
 #define PHP_USE_PHP_CRYPT_R 1
