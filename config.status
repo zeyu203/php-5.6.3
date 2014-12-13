@@ -448,7 +448,7 @@ Copyright (C) 2009 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/zeyu/Documents/php-5.6.3'
+ac_pwd='/home/zeyu/Workspace/code/source/php-5.6.3'
 srcdir='.'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
@@ -767,23 +767,23 @@ S["PEAR_INSTALLDIR"]="${exec_prefix}/lib/php"
 S["NATIVE_RPATHS"]=""
 S["INSTALL_IT"]=""
 S["EXTRA_INCLUDES"]=""
-S["INCLUDES"]=" -I/home/zeyu/Documents/php-5.6.3/ext/date/lib -I/home/zeyu/Documents/php-5.6.3/ext/ereg/regex -I/usr/include/libxml2 -I/home/zeyu/Documents/php-5.6"\
-".3/ext/mbstring/oniguruma -I/home/zeyu/Documents/php-5.6.3/ext/mbstring/libmbfl -I/home/zeyu/Documents/php-5.6.3/ext/mbstring/libmbfl/mbfl -I/usr/in"\
-"clude/mysql -I/home/zeyu/Documents/php-5.6.3/ext/sqlite3/libsqlite -I/home/zeyu/Documents/php-5.6.3/ext/zip/lib -I$(top_builddir)/TSRM -I$(top_build"\
-"dir)/Zend"
+S["INCLUDES"]=" -I/home/zeyu/Workspace/code/source/php-5.6.3/ext/date/lib -I/home/zeyu/Workspace/code/source/php-5.6.3/ext/ereg/regex -I/usr/include/libxml2 -I/hom"\
+"e/zeyu/Workspace/code/source/php-5.6.3/ext/mbstring/oniguruma -I/home/zeyu/Workspace/code/source/php-5.6.3/ext/mbstring/libmbfl -I/home/zeyu/Workspa"\
+"ce/code/source/php-5.6.3/ext/mbstring/libmbfl/mbfl -I/usr/include/mysql -I/home/zeyu/Workspace/code/source/php-5.6.3/ext/sqlite3/libsqlite -I/home/z"\
+"eyu/Workspace/code/source/php-5.6.3/ext/zip/lib -I$(top_builddir)/TSRM -I$(top_builddir)/Zend"
 S["ZEND_EXTRA_LIBS"]=""
-S["EXTRA_LIBS"]="-lcrypt   -lz -lresolv -lcrypt -lrt -lmysqlclient -lcurl -lrt -lm -ldl -lnsl  -lrt -lxml2 -lssl -lcrypto -lcurl -lxml2 -lmysqlclient -lz -lm -lrt -l"\
-"dl -lxml2 -lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lxml2 -lcrypt "
+S["EXTRA_LIBS"]="-lcrypt   -lz -lresolv -lcrypt -lrt -lmysqlclient -lcurl -lrt -lm -ldl -lnsl  -lxml2 -lssl -lcrypto -lcurl -lxml2 -lmysqlclient -lz -lm -ldl -lxml2 "\
+"-lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lxml2 -lcrypt "
 S["EXTRA_LDFLAGS_PROGRAM"]="   -L/usr/lib/i386-linux-gnu"
 S["EXTRA_LDFLAGS"]="   -L/usr/lib/i386-linux-gnu"
 S["EXTENSION_DIR"]="/home/zeyu/Documents/php-5.6.3/sapi/cli/php/lib/php/extensions/no-debug-non-zts-20131226"
 S["DEBUG_CFLAGS"]=""
 S["program_suffix"]=""
 S["program_prefix"]=""
-S["php_abs_top_srcdir"]="/home/zeyu/Documents/php-5.6.3"
-S["php_abs_top_builddir"]="/home/zeyu/Documents/php-5.6.3"
-S["abs_srcdir"]="/home/zeyu/Documents/php-5.6.3"
-S["abs_builddir"]="/home/zeyu/Documents/php-5.6.3"
+S["php_abs_top_srcdir"]="/home/zeyu/Workspace/code/source/php-5.6.3"
+S["php_abs_top_builddir"]="/home/zeyu/Workspace/code/source/php-5.6.3"
+S["abs_srcdir"]="/home/zeyu/Workspace/code/source/php-5.6.3"
+S["abs_builddir"]="/home/zeyu/Workspace/code/source/php-5.6.3"
 S["PHP_INSTALLED_SAPIS"]=" cli fpm cgi"
 S["EXPANDED_PHP_CONFIG_FILE_SCAN_DIR"]=""
 S["EXPANDED_PHP_CONFIG_FILE_PATH"]="/home/zeyu/Documents/php-5.6.3/sapi/config"
@@ -1229,8 +1229,7 @@ D["HAVE_SQLITE3"]=" 1"
 D["HAVE_BCMATH"]=" 1"
 D["HAVE_CTYPE"]=" 1"
 D["HAVE_CURL_SSL"]=" 1"
-D["HAVE_OPENSSL_CRYPTO_H"]=" 1"
-D["HAVE_CURL_OPENSSL"]=" 1"
+D["HAVE_CURL_GNUTLS"]=" 1"
 D["HAVE_CURL"]=" 1"
 D["HAVE_CURL_EASY_STRERROR"]=" 1"
 D["HAVE_CURL_MULTI_STRERROR"]=" 1"
@@ -1469,7 +1468,7 @@ D["HAVE_SIGACTION"]=" 1"
 D["HAVE_STDARG_H"]=" 1"
 D["HAVE_SIGPROCMASK"]=" 1"
 D["PHP_BUILD_DATE"]=" \"2014-12-08\""
-D["PHP_UNAME"]=" \"Linux ubuntu 3.2.0-67-generic-pae #101-Ubuntu SMP Tue Jul 15 18:04:54 UTC 2014 i686 i686 i386 GNU/Linux\""
+D["PHP_UNAME"]=" \"Linux ubuntu 3.13.0-40-generic #69-Ubuntu SMP Thu Nov 13 17:56:26 UTC 2014 i686 i686 i686 GNU/Linux\""
 D["PHP_OS"]=" \"Linux\""
 D["HAVE_BUILD_DEFS_H"]=" 1"
   for (key in D) D_is_set[key] = 1
