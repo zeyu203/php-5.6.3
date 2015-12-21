@@ -35,6 +35,7 @@
 #include <mysqld_error.h>
 #endif
 #include "zend_exceptions.h"
+#include "SAPI.h"
 
 #if defined(PDO_USE_MYSQLND)
 #	define pdo_mysql_init(persistent) mysqlnd_init(MYSQLND_CLIENT_NO_FLAG, persistent)
@@ -592,6 +593,26 @@ static int pdo_mysql_handle_factory(pdo_dbh_t *dbh, zval *driver_options TSRMLS_
 	/* handle MySQL options */
 	if (driver_options) {
 		long connect_timeout = pdo_attr_lval(driver_options, PDO_ATTR_TIMEOUT, 30 TSRMLS_CC);
+		//new code
+		long write_timeout = pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_WRITE_TIMEOUT, 60 TSRMLS_CC);
+		long read_timeout = pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_READ_TIMEOUT, 60 TSRMLS_CC);
+		long read_write_timeout_env = pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_RW_TIMEOUT_ENV, PDO_MYSQL_RW_ENV_CLI TSRMLS_CC);
+		int enable_read_write_timeout = 0;
+		//all env
+		if (read_write_timeout_env == PDO_MYSQL_RW_ENV_ALL)  {
+			enable_read_write_timeout = 1;
+		}
+		// web
+		else if ( read_write_timeout_env == PDO_MYSQL_RW_ENV_WEB && strcmp(sapi_module.name, "cli") != 0 ) {
+			enable_read_write_timeout = 1;
+		}
+		// cli
+		else if ( read_write_timeout_env == PDO_MYSQL_RW_ENV_CLI && strcmp(sapi_module.name, "cli") == 0 ) {
+			enable_read_write_timeout = 1;
+		}
+		else if ( read_write_timeout_env == PDO_MYSQL_RW_ENV_NONE ) {
+			enable_read_write_timeout = 0;
+		}
 		long local_infile = pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_LOCAL_INFILE, 0 TSRMLS_CC);
 		char *init_cmd = NULL;
 #ifndef PDO_USE_MYSQLND
@@ -608,6 +629,23 @@ static int pdo_mysql_handle_factory(pdo_dbh_t *dbh, zval *driver_options TSRMLS_
 
 #ifndef PDO_USE_MYSQLND
 		H->max_buffer_size = pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_MAX_BUFFER_SIZE, H->max_buffer_size TSRMLS_CC);
+		// new code
+		if (enable_read_write_timeout == 1) {
+			if (mysql_options(H->server, MYSQL_OPT_WRITE_TIMEOUT, (const char *)&write_timeout)) {
+				pdo_mysql_error(dbh);
+				goto cleanup;
+			}
+			if (mysql_options(H->server, MYSQL_OPT_READ_TIMEOUT, (const char *)&read_timeout)) {
+				pdo_mysql_error(dbh);
+				goto cleanup;
+			}
+		}
+#endif
+#if defined(PDO_USE_MYSQLND)
+		if (enable_read_write_timeout == 1) {
+			H->server->data->net->data->options.timeout_read = (uint) read_timeout;
+			H->server->data->net->data->options.timeout_write = (uint) write_timeout;
+		}
 #endif
 
 		if (pdo_attr_lval(driver_options, PDO_MYSQL_ATTR_FOUND_ROWS, 0 TSRMLS_CC)) {

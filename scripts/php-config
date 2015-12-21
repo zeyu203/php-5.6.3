@@ -1,23 +1,23 @@
 #! /bin/sh
 
 SED="/bin/sed"
-prefix="/home/zeyu/Documents/php-5.6.3/sapi/cli/php"
-datarootdir="/home/zeyu/Documents/php-5.6.3/sapi/cli/php/php"
+prefix="/home/zeyu/Workspace/code/source/php-5.6.3/objs"
+datarootdir="/home/zeyu/Workspace/code/source/php-5.6.3/objs/php"
 exec_prefix="${prefix}"
 version="5.6.3"
 vernum="50603"
 include_dir="${prefix}/include/php"
 includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
 ldflags=" -L/usr/lib/i386-linux-gnu"
-libs="-lcrypt   -lz -lresolv -lcrypt -lrt -lmysqlclient -lcurl -lrt -lm -ldl -lnsl  -lxml2 -lssl -lcrypto -lcurl -lxml2 -lmysqlclient -lz -lm -ldl -lxml2 -lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lxml2 -lcrypt "
-extension_dir='/home/zeyu/Documents/php-5.6.3/sapi/cli/php/lib/php/extensions/no-debug-non-zts-20131226'
+libs="-lcrypt   -lz -lresolv -lcrypt -lrt -lmcrypt -lltdl -lpng -lz -lcurl -lz -lrt -lm -ldl -lnsl  -lxml2 -lcurl -lxml2 -lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lcrypt "
+extension_dir='/home/zeyu/Workspace/code/source/php-5.6.3/objs/lib/php/extensions/no-debug-non-zts-20131226'
 man_dir=`eval echo ${datarootdir}/man`
 program_prefix=""
 program_suffix=""
 exe_extension=""
 php_cli_binary=NONE
 php_cgi_binary=NONE
-configure_options=" '--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' '--with-mysql=/usr' '--with-mysqli=/usr/bin/mysql_config' '--with-libxml-dir=/usr' '--enable-xml' '--disable-rpath' '--enable-bcmath' '--enable-shmop' '--enable-sysvsem' '--enable-inline-optimization' '--with-curl' '--enable-mbregex' '--enable-fpm' '--enable-mbstring' '--with-openssl' '--with-mhash' '--enable-pcntl' '--enable-sockets' '--with-xmlrpc' '--enable-zip' '--enable-soap' '--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config' '--enable-cutstring'"
+configure_options=" '--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' '--enable-fpm' '--with-mcrypt=/usr/local/libmcrypt' '--with-zlib' '--enable-mbstring' '--with-mysql' '--with-mysql-sock' '--with-gd' '--enable-gd-native-ttf' '--enable-pdo' '--with-gettext' '--with-curl' '--with-pdo-mysql' '--enable-sockets' '--enable-bcmath' '--enable-xml' '--enable-zip'"
 php_sapis=" cli fpm cgi"
 
 # Set php_cli_binary and php_cgi_binary if available

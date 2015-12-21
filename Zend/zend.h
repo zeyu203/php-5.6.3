@@ -319,6 +319,8 @@ typedef struct _zend_object {
 #include "zend_object_handlers.h"
 #include "zend_ast.h"
 
+// union zvalue_value
+// 变量值存储结构 {{{
 typedef union _zvalue_value {
 	long lval;					/* long value */
 	double dval;				/* double value */
@@ -329,15 +331,17 @@ typedef union _zvalue_value {
 	HashTable *ht;				/* hash table value */
 	zend_object_value obj;
 	zend_ast *ast;
-} zvalue_value;
+} zvalue_value; // }}}
 
+// struct _zval_struct
+// php 变量描述结构 {{{
 struct _zval_struct {
 	/* Variable information */
-	zvalue_value value;		/* value */
-	zend_uint refcount__gc;
-	zend_uchar type;	/* active type */
-	zend_uchar is_ref__gc;
-};
+	zvalue_value value;		/* value */		// 变量值
+	zend_uint refcount__gc;					// 引用计数
+	zend_uchar type;	/* active type */	// 变量的具体类型
+	zend_uchar is_ref__gc;					// 是否为引用
+}; // }}}
 
 #define Z_REFCOUNT_PP(ppz)		Z_REFCOUNT_P(*(ppz))
 #define Z_SET_REFCOUNT_PP(ppz, rc)	Z_SET_REFCOUNT_P(*(ppz), rc)

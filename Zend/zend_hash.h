@@ -64,6 +64,8 @@ typedef struct bucket {
 	const char *arKey;
 } Bucket;
 
+// struct _hashtable
+// PHP 实现的哈希表 {{{
 typedef struct _hashtable {
 	uint nTableSize;
 	uint nTableMask;
@@ -80,7 +82,7 @@ typedef struct _hashtable {
 #if ZEND_DEBUG
 	int inconsistent;
 #endif
-} HashTable;
+} HashTable; // }}}
 
 
 typedef struct _zend_hash_key {

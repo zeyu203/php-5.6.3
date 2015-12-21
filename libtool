@@ -44,7 +44,7 @@ available_tags=""
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host ubuntu:
+# Libtool was configured on host techlog:
 
 # Shell to use when invoking shell scripts.
 SHELL="/bin/bash"
@@ -332,7 +332,7 @@ link_all_deplibs=unknown
 sys_lib_search_path_spec="/usr/lib/gcc/i686-linux-gnu/4.8 /usr/lib/i386-linux-gnu /usr/lib /lib/i386-linux-gnu /lib"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/libfakeroot /usr/lib/i386-linux-gnu/mesa-egl /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/libfakeroot /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""

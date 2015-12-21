@@ -462,7 +462,7 @@
 #define HAVE_BCMATH 1
 
 /* */
-/* #undef HAVE_BIND_TEXTDOMAIN_CODESET */
+#define HAVE_BIND_TEXTDOMAIN_CODESET 1
 
 /* */
 /* #undef HAVE_BIRDSTEP */
@@ -561,13 +561,13 @@
 #define HAVE_CURL_EASY_STRERROR 1
 
 /* Have cURL with GnuTLS support */
-#define HAVE_CURL_GNUTLS 1
+/* #undef HAVE_CURL_GNUTLS */
 
 /* */
 #define HAVE_CURL_MULTI_STRERROR 1
 
 /* Have cURL with OpenSSL support */
-/* #undef HAVE_CURL_OPENSSL */
+#define HAVE_CURL_OPENSSL 1
 
 /* Have cURL with SSL support */
 #define HAVE_CURL_SSL 1
@@ -582,7 +582,7 @@
 /* #undef HAVE_DBMAKER */
 
 /* */
-/* #undef HAVE_DCNGETTEXT */
+#define HAVE_DCNGETTEXT 1
 
 /* Define if the compiler supports Decimal32/64/128 types. */
 #define HAVE_DECIMAL_FP_SUPPORT 1
@@ -616,7 +616,7 @@
 /* #undef HAVE_DMALLOC */
 
 /* */
-/* #undef HAVE_DNGETTEXT */
+#define HAVE_DNGETTEXT 1
 
 /* Define to 1 if you have the <dns.h> header file. */
 /* #undef HAVE_DNS_H */
@@ -637,7 +637,7 @@
 /* #undef HAVE_DOPRNT */
 
 /* OpenSSL 0.9.7 or later */
-#define HAVE_DSA_DEFAULT_METHOD 1
+/* #undef HAVE_DSA_DEFAULT_METHOD */
 
 /* Whether to enable DTrace support */
 /* #undef HAVE_DTRACE */
@@ -667,7 +667,7 @@
 /* #undef HAVE_EXIF */
 
 /* Define to 1 if you have the `fabsf' function. */
-/* #undef HAVE_FABSF */
+#define HAVE_FABSF 1
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #define HAVE_FCNTL_H 1
@@ -685,7 +685,7 @@
 #define HAVE_FLOCK_LINUX /**/
 
 /* Define to 1 if you have the `floorf' function. */
-/* #undef HAVE_FLOORF */
+#define HAVE_FLOORF 1
 
 /* Define if flush should be called explicitly after a buffered io. */
 /* #undef HAVE_FLUSHIO */
@@ -733,10 +733,10 @@
 #define HAVE_GCVT 1
 
 /* */
-/* #undef HAVE_GD_BUNDLED */
+#define HAVE_GD_BUNDLED 1
 
 /* */
-/* #undef HAVE_GD_CACHE_CREATE */
+#define HAVE_GD_CACHE_CREATE 1
 
 /* */
 /* #undef HAVE_GD_FREETYPE */
@@ -745,7 +745,7 @@
 /* #undef HAVE_GD_JPG */
 
 /* */
-/* #undef HAVE_GD_PNG */
+#define HAVE_GD_PNG 1
 
 /* */
 /* #undef HAVE_GD_WEBP */
@@ -790,7 +790,7 @@
 #define HAVE_GETPID 1
 
 /* Define to 1 if you have the `getpriority' function. */
-#define HAVE_GETPRIORITY 1
+/* #undef HAVE_GETPRIORITY */
 
 /* Define to 1 if you have the `getprotobyname' function. */
 #define HAVE_GETPROTOBYNAME 1
@@ -1045,13 +1045,13 @@
 /* #undef HAVE_LIBICONV */
 
 /* */
-/* #undef HAVE_LIBINTL */
+#define HAVE_LIBINTL 1
 
 /* Define to 1 if you have the `m' library (-lm). */
 #define HAVE_LIBM 1
 
 /* */
-/* #undef HAVE_LIBMCRYPT */
+#define HAVE_LIBMCRYPT 1
 
 /* Whether you have libmm */
 /* #undef HAVE_LIBMM */
@@ -1197,7 +1197,7 @@
 #define HAVE_MYSQL 1
 
 /* */
-#define HAVE_MYSQLILIB 1
+/* #undef HAVE_MYSQLILIB */
 
 /* Define to 1 if you have the `nanosleep' function. */
 #define HAVE_NANOSLEEP 1
@@ -1218,7 +1218,7 @@
 /* #undef HAVE_NEW_MIME2TEXT */
 
 /* */
-/* #undef HAVE_NGETTEXT */
+#define HAVE_NGETTEXT 1
 
 /* Define to 1 if you have the `nice' function. */
 #define HAVE_NICE 1
@@ -1279,10 +1279,10 @@
 #define HAVE_ONIG 1
 
 /* Define to 1 if you have the <openssl/crypto.h> header file. */
-/* #undef HAVE_OPENSSL_CRYPTO_H */
+#define HAVE_OPENSSL_CRYPTO_H 1
 
 /* */
-#define HAVE_OPENSSL_EXT 1
+/* #undef HAVE_OPENSSL_EXT */
 
 /* */
 /* #undef HAVE_ORALDAP */
@@ -1516,7 +1516,7 @@
 #define HAVE_SELECT 1
 
 /* */
-#define HAVE_SEMUN 0
+/* #undef HAVE_SEMUN */
 
 /* Define to 1 if you have the `setegid' function. */
 #define HAVE_SETEGID 1
@@ -1537,7 +1537,7 @@
 #define HAVE_SETPGID 1
 
 /* Define to 1 if you have the `setpriority' function. */
-#define HAVE_SETPRIORITY 1
+/* #undef HAVE_SETPRIORITY */
 
 /* Define to 1 if you have the `setproctitle' function. */
 /* #undef HAVE_SETPROCTITLE */
@@ -1552,7 +1552,7 @@
 #define HAVE_SETVBUF 1
 
 /* */
-#define HAVE_SHMOP 1
+/* #undef HAVE_SHMOP */
 
 /* Define if you have SysV IPC SHM support */
 #define HAVE_SHM_IPC 1
@@ -1588,10 +1588,10 @@
 /* #undef HAVE_SIGSETJMP */
 
 /* Define to 1 if you have the `sigtimedwait' function. */
-#define HAVE_SIGTIMEDWAIT 1
+/* #undef HAVE_SIGTIMEDWAIT */
 
 /* Define to 1 if you have the `sigwaitinfo' function. */
-#define HAVE_SIGWAITINFO 1
+/* #undef HAVE_SIGWAITINFO */
 
 /* */
 #define HAVE_SIMPLEXML 1
@@ -1606,7 +1606,7 @@
 #define HAVE_SNPRINTF 1
 
 /* */
-#define HAVE_SOAP 1
+/* #undef HAVE_SOAP */
 
 /* Whether struct sockaddr has field sa_len */
 /* #undef HAVE_SOCKADDR_SA_LEN */
@@ -1705,7 +1705,7 @@
 /* #undef HAVE_STD_SYSLOG */
 
 /* */
-#define HAVE_STMT_NEXT_RESULT 1
+/* #undef HAVE_STMT_NEXT_RESULT */
 
 /* Define to 1 if you have the `strcasecmp' function. */
 #define HAVE_STRCASECMP 1
@@ -1744,7 +1744,7 @@
 #define HAVE_STRNLEN 1
 
 /* Define to 1 if you have the `strpbrk' function. */
-#define HAVE_STRPBRK 1
+/* #undef HAVE_STRPBRK */
 
 /* Define to 1 if you have the `strpncpy' function. */
 /* #undef HAVE_STRPNCPY */
@@ -1771,10 +1771,10 @@
 #define HAVE_STRTOLL 1
 
 /* Define to 1 if you have the `strtoul' function. */
-#define HAVE_STRTOUL 1
+/* #undef HAVE_STRTOUL */
 
 /* Define to 1 if you have the `strtoull' function. */
-#define HAVE_STRTOULL 1
+/* #undef HAVE_STRTOULL */
 
 /* whether you have struct flock */
 #define HAVE_STRUCT_FLOCK 1
@@ -1834,7 +1834,7 @@
 /* #undef HAVE_SYSVMSG */
 
 /* */
-#define HAVE_SYSVSEM 1
+/* #undef HAVE_SYSVSEM */
 
 /* */
 /* #undef HAVE_SYSVSHM */
@@ -2054,10 +2054,10 @@
 #define HAVE_VSNPRINTF 1
 
 /* Define to 1 if you have the `wait3' function. */
-#define HAVE_WAIT3 1
+/* #undef HAVE_WAIT3 */
 
 /* */
-#define HAVE_WAITPID 1
+/* #undef HAVE_WAITPID */
 
 /* Define to 1 if you have the <wchar.h> header file. */
 #define HAVE_WCHAR_H 1
@@ -2075,7 +2075,7 @@
 #define HAVE_XMLREADER 1
 
 /* */
-#define HAVE_XMLRPC 1
+/* #undef HAVE_XMLRPC */
 
 /* Define to 1 if you have the <xmltok.h> header file. */
 /* #undef HAVE_XMLTOK_H */
@@ -2096,7 +2096,7 @@
 #define HAVE_ZIP 1
 
 /* */
-/* #undef HAVE_ZLIB */
+#define HAVE_ZLIB 1
 
 /* whether _controlfp is present usable */
 /* #undef HAVE__CONTROLFP */
@@ -2150,16 +2150,16 @@
 /* #undef MYSQLI_USE_MYSQLND */
 
 /* Enable compressed protocol support */
-/* #undef MYSQLND_COMPRESSION_WANTED */
+#define MYSQLND_COMPRESSION_WANTED 1
 
 /* Enable mysqlnd code that uses OpenSSL directly */
 /* #undef MYSQLND_HAVE_SSL */
 
 /* Enable core mysqlnd SSL code */
-/* #undef MYSQLND_SSL_SUPPORTED */
+#define MYSQLND_SSL_SUPPORTED 1
 
 /* Whether mysqlnd is enabled */
-/* #undef MYSQL_USE_MYSQLND */
+#define MYSQL_USE_MYSQLND 1
 
 /* */
 /* #undef NDBM_INCLUDE_FILE */
@@ -2192,13 +2192,13 @@
 /* #undef PDO_MYSQL_UNIX_ADDR */
 
 /* Whether pdo_mysql uses mysqlnd */
-/* #undef PDO_USE_MYSQLND */
+#define PDO_USE_MYSQLND 1
 
 /* */
 #define PHAR_HASH_OK 1
 
 /* */
-#define PHAR_HAVE_OPENSSL 1
+/* #undef PHAR_HAVE_OPENSSL */
 
 /* */
 /* #undef PHPDBG_DEBUG */
@@ -2210,7 +2210,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2014-12-08"
+#define PHP_BUILD_DATE "2015-12-10"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1
@@ -2246,10 +2246,10 @@
 #define PHP_MD5_CRYPT 1
 
 /* */
-#define PHP_MHASH_BC 1
+/* #undef PHP_MHASH_BC */
 
 /* */
-/* #undef PHP_MYSQL_UNIX_SOCK_ADDR */
+#define PHP_MYSQL_UNIX_SOCK_ADDR "/var/run/mysqld/mysqld.sock"
 
 /* */
 /* #undef PHP_OCI8_DEF_DIR */
@@ -2288,7 +2288,7 @@
 #define PHP_STD_DES_CRYPT 1
 
 /* uname -a output */
-#define PHP_UNAME "Linux ubuntu 3.13.0-40-generic #69-Ubuntu SMP Thu Nov 13 17:56:26 UTC 2014 i686 i686 i686 GNU/Linux"
+#define PHP_UNAME "Linux techlog 3.13.0-43-generic #72-Ubuntu SMP Mon Dec 8 19:35:44 UTC 2014 i686 i686 i686 GNU/Linux"
 
 /* Whether PHP has to use its own crypt_r for blowfish, des and ext des */
 #define PHP_USE_PHP_CRYPT_R 1
@@ -2315,7 +2315,7 @@
 /* #undef ROXEN_USE_ZTS */
 
 /* The size of `char', as computed by sizeof. */
-#define SIZEOF_CHAR 1
+/* #undef SIZEOF_CHAR */
 
 /* The size of `int', as computed by sizeof. */
 #define SIZEOF_INT 4
@@ -2389,7 +2389,7 @@
 /* #undef TSRM_ST */
 
 /* */
-#define UNDEF_THREADS_HACK /**/
+/* #undef UNDEF_THREADS_HACK */
 
 /* */
 /* #undef UNIXWARE */
@@ -2398,7 +2398,7 @@
 #define USE_COMBINATION_EXPLOSION_CHECK 1
 
 /* */
-/* #undef USE_GD_IMGSTRTTF */
+#define USE_GD_IMGSTRTTF 1
 
 /* */
 /* #undef USE_GD_JISX0208 */

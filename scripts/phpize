@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Variable declaration
-prefix='/home/zeyu/Documents/php-5.6.3/sapi/cli/php'
-datarootdir='/home/zeyu/Documents/php-5.6.3/sapi/cli/php/php'
+prefix='/home/zeyu/Workspace/code/source/php-5.6.3/objs'
+datarootdir='/home/zeyu/Workspace/code/source/php-5.6.3/objs/php'
 exec_prefix="`eval echo ${prefix}`"
 phpdir="`eval echo ${exec_prefix}/lib/php`/build"
 includedir="`eval echo ${prefix}/include`/php"
@@ -152,7 +152,7 @@ phpize_copy_files()
 phpize_replace_prefix()
 {
   $SED \
-  -e "s#/home/zeyu/Documents/php-5.6.3/sapi/cli/php#$prefix#" \
+  -e "s#/home/zeyu/Workspace/code/source/php-5.6.3/objs#$prefix#" \
   < "$phpdir/phpize.m4" > configure.in
 }
 

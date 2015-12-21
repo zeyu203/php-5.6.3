@@ -3,27 +3,21 @@
 # Created by configure
 
 './configure' \
-'--prefix=/home/zeyu/Documents/php-5.6.3/sapi/cli/php' \
-'--with-mysql=/usr' \
-'--with-mysqli=/usr/bin/mysql_config' \
-'--with-libxml-dir=/usr' \
-'--enable-xml' \
-'--disable-rpath' \
-'--enable-bcmath' \
-'--enable-shmop' \
-'--enable-sysvsem' \
-'--enable-inline-optimization' \
-'--with-curl' \
-'--enable-mbregex' \
+'--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' \
 '--enable-fpm' \
+'--with-mcrypt=/usr/local/libmcrypt' \
+'--with-zlib' \
 '--enable-mbstring' \
-'--with-openssl' \
-'--with-mhash' \
-'--enable-pcntl' \
+'--with-mysql' \
+'--with-mysql-sock' \
+'--with-gd' \
+'--enable-gd-native-ttf' \
+'--enable-pdo' \
+'--with-gettext' \
+'--with-curl' \
+'--with-pdo-mysql' \
 '--enable-sockets' \
-'--with-xmlrpc' \
+'--enable-bcmath' \
+'--enable-xml' \
 '--enable-zip' \
-'--enable-soap' \
-'--with-config-file-path=/home/zeyu/Documents/php-5.6.3/sapi/config' \
-'--enable-cutstring' \
 "$@"
