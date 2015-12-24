@@ -34,10 +34,10 @@
 #include "ext/sqlite3/php_sqlite3.h"
 #include "ext/zlib/php_zlib.h"
 #include "ext/bcmath/php_bcmath.h"
+#include "ext/bz2/php_bz2.h"
 #include "ext/ctype/php_ctype.h"
 #include "ext/curl/php_curl.h"
 #include "ext/dom/php_dom.h"
-#include "ext/fileinfo/php_fileinfo.h"
 #include "ext/filter/php_filter.h"
 #include "ext/gd/php_gd.h"
 #include "ext/gettext/php_gettext.h"
@@ -48,6 +48,7 @@
 #include "ext/mcrypt/php_mcrypt.h"
 #include "ext/myfunctions/php_myfunctions.h"
 #include "ext/mysql/php_mysql.h"
+#include "ext/mysqli/php_mysqli.h"
 #include "ext/pdo/php_pdo.h"
 #include "ext/pdo_mysql/php_pdo_mysql.h"
 #include "ext/pdo_sqlite/php_pdo_sqlite.h"
@@ -75,10 +76,10 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_sqlite3_ptr,
 	phpext_zlib_ptr,
 	phpext_bcmath_ptr,
+	phpext_bz2_ptr,
 	phpext_ctype_ptr,
 	phpext_curl_ptr,
 	phpext_dom_ptr,
-	phpext_fileinfo_ptr,
 	phpext_filter_ptr,
 	phpext_gd_ptr,
 	phpext_gettext_ptr,
@@ -89,6 +90,7 @@ static zend_module_entry *php_builtin_extensions[] = {
 	phpext_mcrypt_ptr,
 	phpext_myfunctions_ptr,
 	phpext_mysql_ptr,
+	phpext_mysqli_ptr,
 	phpext_pdo_ptr,
 	phpext_pdo_mysql_ptr,
 	phpext_pdo_sqlite_ptr,

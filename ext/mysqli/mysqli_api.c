@@ -1808,6 +1808,19 @@ PHP_FUNCTION(mysqli_options)
 			RETURN_FALSE;
 		}
 	}
+
+#ifdef MYSQLI_USE_MYSQLND
+	l_value = convert_to_long_ex(mysql_value);
+	switch (mysql_option) {
+		case MYSQL_OPT_READ_TIMEOUT:
+			mysql->mysql->data->net->options.timeout_read = (uint) l_value;
+			break;
+		case MYSQL_OPT_WRITE_TIMEOUT:
+			mysql->mysql->data->net->options.timeout_write = (uint) l_value;
+			break;
+	}
+#endif
+
 	expected_type = mysqli_options_get_option_zval_type(mysql_option);
 	if (expected_type != Z_TYPE_PP(mysql_value)) {
 		switch (expected_type) {

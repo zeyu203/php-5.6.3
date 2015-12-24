@@ -18,7 +18,7 @@
 
 /* $Id$ */
 
-#define CONFIGURE_COMMAND " './configure'  '--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' '--enable-fpm' '--with-mcrypt=/usr/local/libmcrypt' '--with-zlib' '--enable-mbstring' '--with-mysql' '--with-mysql-sock' '--with-gd' '--enable-gd-native-ttf' '--enable-pdo' '--with-gettext' '--with-curl' '--with-pdo-mysql' '--enable-sockets' '--enable-bcmath' '--enable-xml' '--enable-zip'"
+#define CONFIGURE_COMMAND " './configure'  '--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' '--enable-fpm' '--with-mcrypt=/usr/local/libmcrypt' '--with-zlib' '--enable-mbstring' '--with-mysql' '--with-mysqli' '--with-mysql-sock' '--with-gd' '--with-jpeg-dir=/usr/lib' '--enable-gd-native-ttf' '--enable-pdo' '--with-gettext' '--with-curl' '--with-pdo-mysql' '--enable-sockets' '--enable-bcmath' '--enable-xml' '--with-bz2' '--enable-zip' '--enable-mysqli' '--disable-fileinfo'"
 #define PHP_ADA_INCLUDE		""
 #define PHP_ADA_LFLAGS		""
 #define PHP_ADA_LIBS		""

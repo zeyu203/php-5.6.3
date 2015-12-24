@@ -489,7 +489,7 @@
 #define HAVE_BUNDLED_PCRE 1
 
 /* */
-/* #undef HAVE_BZ2 */
+#define HAVE_BZ2 1
 
 /* */
 /* #undef HAVE_CALENDAR */
@@ -742,7 +742,7 @@
 /* #undef HAVE_GD_FREETYPE */
 
 /* */
-/* #undef HAVE_GD_JPG */
+#define HAVE_GD_JPG 1
 
 /* */
 #define HAVE_GD_PNG 1
@@ -1738,7 +1738,7 @@
 /* #undef HAVE_STRLCPY */
 
 /* Define to 1 if you have the `strndup' function. */
-#define HAVE_STRNDUP 1
+/* #undef HAVE_STRNDUP */
 
 /* Define to 1 if you have the `strnlen' function. */
 #define HAVE_STRNLEN 1
@@ -2021,7 +2021,7 @@
 #define HAVE_UTIME 1
 
 /* Define to 1 if you have the `utimes' function. */
-#define HAVE_UTIMES 1
+/* #undef HAVE_UTIMES */
 
 /* Define to 1 if you have the <utime.h> header file. */
 #define HAVE_UTIME_H 1
@@ -2147,7 +2147,7 @@
 /* #undef MISSING_STRTOK_R_DECL */
 
 /* Whether mysqlnd is enabled */
-/* #undef MYSQLI_USE_MYSQLND */
+#define MYSQLI_USE_MYSQLND 1
 
 /* Enable compressed protocol support */
 #define MYSQLND_COMPRESSION_WANTED 1
@@ -2210,7 +2210,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2015-12-10"
+#define PHP_BUILD_DATE "2015-12-21"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1

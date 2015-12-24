@@ -19,7 +19,6 @@
 *.tgz
 *.tar.gz
 *.tar.bz2
-*.tar.xz
 .FBCIndex
 .FBCLockFolder
 .deps
@@ -97,8 +96,6 @@ stamp-h.in
 scan_makefile_in.awk
 TSRM/tsrm_config.h
 Zend/zend_config.h
-Zend/zend_dtrace_gen.h
-Zend/zend_dtrace_gen.hbak
 Zend/zend_ini_parser.c
 Zend/zend_ini_parser.h
 Zend/zend_ini_parser.output
@@ -110,6 +107,7 @@ ext/iconv/php_iconv_aliased_libiconv.h
 ext/phar/phar.php
 main/php_config.h
 main/php_config.h.in
+
 # Test specific Ignores
 tests/*/*.diff
 tests/*/*.out
@@ -141,6 +139,7 @@ tests/*/*.sh
 */*/tests/*/*.exp
 */*/tests/*/*.log
 */*/tests/*/*.sh
+
 # Extension specifc ignores
 ext/*/configure.in
 ext/*/ltmain.sh
@@ -150,6 +149,7 @@ ext/*/scan_makefile_in.awk
 ext/*/Makefile.global
 ext/*/acinclude.m4
 ext/*/config.sub
+
 # Extension specific
 ext/iconv/scan_makefile_in.awk
 ext/iconv/php_have_bsd_iconv.h
@@ -204,8 +204,6 @@ ext/pdo_sqlite/sqlite3.h
 ext/pdo_sqlite/tests/*.db
 ext/pdo_sqlite/tests/*.tmp
 ext/phar/phar.phar
-ext/phar/phar.1
-ext/phar/phar.phar.1
 ext/pspell/tests/*.tmp
 ext/reflection/xml
 ext/reflection/html
@@ -237,16 +235,12 @@ sapi/apache/libphp5.module
 sapi/apache2handler/libphp5.module
 sapi/apache_hooks/libphp5.module
 sapi/cgi/php-cgi
-sapi/cgi/php-cgi.1
 sapi/cli/php.1
 sapi/fpm/php-fpm
 sapi/fpm/php-fpm.1
 sapi/fpm/init.d.php-fpm
 sapi/fpm/php-fpm.conf
 sapi/fpm/fpm/php-cgi
-sapi/phpdbg/phpdbg_parser.c
-sapi/phpdbg/phpdbg_parser.h
-sapi/phpdbg/phpdbg
 scripts/php-config
 scripts/phpize
 scripts/man1/*.1
