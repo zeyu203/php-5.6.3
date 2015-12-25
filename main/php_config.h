@@ -1738,7 +1738,7 @@
 /* #undef HAVE_STRLCPY */
 
 /* Define to 1 if you have the `strndup' function. */
-/* #undef HAVE_STRNDUP */
+#define HAVE_STRNDUP 1
 
 /* Define to 1 if you have the `strnlen' function. */
 #define HAVE_STRNLEN 1
@@ -2021,7 +2021,7 @@
 #define HAVE_UTIME 1
 
 /* Define to 1 if you have the `utimes' function. */
-/* #undef HAVE_UTIMES */
+#define HAVE_UTIMES 1
 
 /* Define to 1 if you have the <utime.h> header file. */
 #define HAVE_UTIME_H 1
@@ -2210,7 +2210,7 @@
 #define PHP_BLOWFISH_CRYPT 1
 
 /* PHP build date */
-#define PHP_BUILD_DATE "2015-12-21"
+#define PHP_BUILD_DATE "2015-12-25"
 
 /* Define if your system has fork/vfork/CreateProcess */
 #define PHP_CAN_SUPPORT_PROC_OPEN 1

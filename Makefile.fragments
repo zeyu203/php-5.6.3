@@ -47,6 +47,8 @@ install-cgi: $(SAPI_CGI_PATH)
 	@$(mkinstalldirs) $(INSTALL_ROOT)$(mandir)/man1
 	@$(INSTALL_DATA) sapi/cgi/php-cgi.1 $(INSTALL_ROOT)$(mandir)/man1/$(program_prefix)php-cgi$(program_suffix).1
 
+
+ext/fileinfo/libmagic/apprentice.lo: /home/zeyu/Workspace/code/source/php-5.6.3/ext/fileinfo/data_file.c
 phpincludedir=$(prefix)/include/php
 
 PDO_HEADER_FILES= \

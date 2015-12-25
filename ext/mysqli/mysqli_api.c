@@ -27,6 +27,7 @@
 #include <signal.h>
 
 #include "php.h"
+#include "SAPI.h"
 #include "php_ini.h"
 #include "php_globals.h"
 #include "ext/standard/info.h"
@@ -1810,13 +1811,13 @@ PHP_FUNCTION(mysqli_options)
 	}
 
 #ifdef MYSQLI_USE_MYSQLND
-	l_value = convert_to_long_ex(mysql_value);
+	l_value = Z_LVAL_PP(mysql_value);
 	switch (mysql_option) {
 		case MYSQL_OPT_READ_TIMEOUT:
-			mysql->mysql->data->net->options.timeout_read = (uint) l_value;
+			mysql->mysql->data->net->data->options.timeout_read = (uint) l_value;
 			break;
 		case MYSQL_OPT_WRITE_TIMEOUT:
-			mysql->mysql->data->net->options.timeout_write = (uint) l_value;
+			mysql->mysql->data->net->data->options.timeout_write = (uint) l_value;
 			break;
 	}
 #endif
@@ -1839,7 +1840,6 @@ PHP_FUNCTION(mysqli_options)
 			ret = mysql_options(mysql->mysql, mysql_option, Z_STRVAL_PP(mysql_value));
 			break;
 		case IS_LONG:
-			l_value = Z_LVAL_PP(mysql_value);
 			ret = mysql_options(mysql->mysql, mysql_option, (char *)&l_value);
 			break;
 		default:

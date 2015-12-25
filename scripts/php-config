@@ -17,7 +17,7 @@ program_suffix=""
 exe_extension=""
 php_cli_binary=NONE
 php_cgi_binary=NONE
-configure_options=" '--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' '--enable-fpm' '--with-mcrypt=/usr/local/libmcrypt' '--with-zlib' '--enable-mbstring' '--with-mysql' '--with-mysqli' '--with-mysql-sock' '--with-gd' '--with-jpeg-dir=/usr/lib' '--enable-gd-native-ttf' '--enable-pdo' '--with-gettext' '--with-curl' '--with-pdo-mysql' '--enable-sockets' '--enable-bcmath' '--enable-xml' '--with-bz2' '--enable-zip' '--enable-mysqli' '--disable-fileinfo'"
+configure_options=" '--prefix=/home/zeyu/Workspace/code/source/php-5.6.3/objs' '--enable-fpm' '--with-mcrypt=/usr/local/libmcrypt' '--with-zlib' '--enable-mbstring' '--with-mysql' '--with-mysqli' '--with-mysql-sock' '--with-gd' '--with-jpeg-dir=/usr/lib' '--enable-gd-native-ttf' '--enable-pdo' '--with-pdo-mysql' '--with-gettext' '--with-curl' '--enable-sockets' '--enable-bcmath' '--enable-xml' '--with-bz2' '--enable-zip'"
 php_sapis=" cli fpm cgi"
 
 # Set php_cli_binary and php_cgi_binary if available

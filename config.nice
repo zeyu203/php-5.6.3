@@ -15,14 +15,12 @@
 '--with-jpeg-dir=/usr/lib' \
 '--enable-gd-native-ttf' \
 '--enable-pdo' \
+'--with-pdo-mysql' \
 '--with-gettext' \
 '--with-curl' \
-'--with-pdo-mysql' \
 '--enable-sockets' \
 '--enable-bcmath' \
 '--enable-xml' \
 '--with-bz2' \
 '--enable-zip' \
-'--enable-mysqli' \
-'--disable-fileinfo' \
 "$@"
